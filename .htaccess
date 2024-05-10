@@ -1,0 +1,12 @@
+
+RewriteEngine On
+# Redirect the client to URL without .php extension
+# Check if the requested file or directory doesn't exist
+# If not, rewrite the URL to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+#cRewriteRule ^([^/]+)/([^/]+)/?$ index.php?url=$1&id=$2 [L,QSA]

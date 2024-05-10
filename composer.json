@@ -1,0 +1,17 @@
+{
+  "name": "app/app",
+
+
+  "autoload": {
+    "psr-4": {
+      "App\\Route\\": "Route/",
+      "App\\Model\\": "model/",
+      "App\\Controller\\": "controler/",
+      "App\\View\\": "view/"
+
+    }
+  },
+  "require": {
+    "ext-mysqli": "*"
+  }
+}
